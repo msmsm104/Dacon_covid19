@@ -8,3 +8,11 @@
  - 1. unlabeled data 전처리 하기
  - 2. unlabeled data 와 train data 합치기 (gender column을 분류하기 위한 새로운 데이터셋 만들기)
  - 3. 분류 모델을 이용해서 other에 해당하는 데이터 female과 male로 분류하기
+### 대성공 (성능 향상)
+
+
+### 0621
+ - gender column을 one-hot-Encoding해주었는데 drop first로 column개수 줄이기 (성능에 영향을 줄지 미지수)
+ - 신경망 학습에 있어 모든 입력 feature를 평균 0 , 분산 1이 되도록 변경 (scaling) => 성능에 영향을 줄거라고 예측
+ => 전처리된 train, test data set에 대하여 학습, 평가 진행 (결과 이전과 비교)
+ - GridSearchCV를 통한 best parameter찾기 (StratifiedKFold사용) => scoring을 무엇으로 정할지가 중요(우선은 roc_auc 값으로 진행 -> hidden_layer_sizes 결과 비교)
