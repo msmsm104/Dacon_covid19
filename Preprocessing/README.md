@@ -21,3 +21,5 @@
  
  
  - GridSearchCV를 통한 best parameter찾기 (StratifiedKFold사용) => scoring을 무엇으로 정할지가 중요(우선은 roc_auc 값으로 진행 -> hidden_layer_sizes 결과 비교)
+
+  => 성능이 떨어짐
